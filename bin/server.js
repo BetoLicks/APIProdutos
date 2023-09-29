@@ -12,7 +12,6 @@ const server = http.createServer(app);
 server.listen(porta);
 server.on('error',onError);
 server.on('listening',onListening);
-console.log('Server is running: '+porta);
 
 function verificaPorta(wporta){
    const port = parseInt(wporta,10);

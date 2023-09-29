@@ -1,21 +1,16 @@
 const express = require('express');
+const bodyparser = require('body-parser');
 
 const app = express();
-
 const router = express.Router();
 
-var rota = router.get('/',(req,res,next) => {
-   res.status(200).send({
-      title:"Produtos API",
-      version: "1.0.0"
-   });
-});
+const index = require('./rotas/index')
+const produtos = require('./rotas/produtos')
 
-var create = router.post('/',(req,res,next) => {
-   res.status(201).send(req.body);
-});
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: false}));
 
-app.use('/',rota);
-app.use('/produtos',create);
+app.use('/',index);
+app.use('/produtos',produtos);
 
 module.exports = app;
