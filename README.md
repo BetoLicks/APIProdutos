@@ -9,7 +9,7 @@ API em Node.js.
 
 ## ✒️ Autor
 
-* **Beto Licks** - (https://github.com/BetoLicks/)
+* **Beto Licks** - (https://www.linkedin.com/in/betolicks/)
 
 ## 📄 Licença
 
